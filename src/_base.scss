@@ -1,0 +1,273 @@
+$background-color: #333;
+
+@function pem($px, $base: 16) {
+    @return ($px / $base) + em;
+}
+
+@mixin clearfix {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+    *zoom: 1;
+}
+
+// Hide from both screenreaders and browsers: h5bp.com/u
+@mixin hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+// Hide only visually, but have it available for screenreaders: h5bp.com/v
+@mixin visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+ul, ol {
+    padding: 0;
+    list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, ol {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    color: #333;
+    position: relative;
+    width: 100%;
+    min-width: pem(320);
+    background: $background-color;
+}
+
+.highlight {
+    background: #fff699;
+    padding: 0 0.5em;
+}
+
+.prose {
+
+    ul, ol {
+        list-style: outside disc;
+        font-size: pem(16);
+        line-height: pem(24);
+        margin-bottom: pem(24);
+    }
+
+    p {
+        font-size: pem(16);
+        line-height: pem(24);
+        margin-bottom: pem(24);
+
+        &.small {
+            color: #666;
+            font-size: pem(13);
+            line-height: pem(24, 13);
+            margin-bottom: pem(24, 13);
+        }
+
+        &.medium {
+            color: #666;
+            font-size: pem(14);
+            line-height: pem(24, 14);
+            margin-bottom: pem(24, 14);
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    h1 {
+        font-size: pem(30);
+        line-height: pem(36, 30);
+        margin-bottom: pem(12, 30);
+    }
+
+    h2 {
+        font-size: pem(24);
+        line-height: pem(30, 24);
+        margin-bottom: pem(12, 24);
+    }
+
+    a {
+        color: #6d7173;
+        border-bottom: 1px solid #a1cfe5;
+        text-decoration: none;
+        outline: none;
+
+        &:focus,
+        &:hover {
+            color: #4ab336;
+            border-bottom-color: #77b36b;
+        }
+    }
+}
+
+.block {
+    position: relative;
+    margin: 0 auto;
+    padding: pem(24) pem(20);
+    max-width: pem(960);
+}
+
+.close-btn {
+    display: block;
+    width: pem(42);
+    height: pem(36);
+    padding: 0;
+    border: 0;
+    outline: none;
+    background: $background-color url("../img/close-btn.svg") left center no-repeat;
+    overflow: hidden;
+    white-space: nowrap;
+    text-indent: 100%;
+    @include opacity(1);
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+
+    .no-svg & {
+        background-image: url("../img/close-btn.png");
+    }
+
+    &:focus,
+    &:hover {
+        @include opacity(1);
+    }
+}
+
+.nav-btn {
+    display: block;
+    width: pem(42);
+    height: pem(36);
+    padding: 0;
+    border: 0;
+    outline: none;
+    background: $background-color url("../img/nav-icon.svg") left center no-repeat;
+    overflow: hidden;
+    white-space: nowrap;
+    text-indent: 100%;
+    @include opacity(0.7);
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+
+    .no-svg & {
+        background-image: url("../img/nav-icon.png");
+    }
+
+    &:hover,
+    &:focus {
+        @include opacity(1);
+    }
+}
+
+#outer-wrap {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+#inner-wrap {
+    position: relative;
+    width: 100%;
+}
+
+#nav {
+    z-index: 200;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    color: #fff;
+
+    .close-btn {
+        display: none;
+    }
+
+    .block-title {
+        @include visuallyhidden;
+    }
+
+    .block {
+        z-index: 2;
+        position: relative;
+        padding: pem(12) pem(20);
+        background: $background-color;
+    }
+
+    ul {
+        @include clearfix;
+        display: block;
+    }
+
+    li {
+        display: block;
+
+        a {
+            display: block;
+            color: #ccc;
+            font-size: pem(14);
+            line-height: pem(18, 14);
+            font-weight: bold;
+            outline: none;
+
+            &:focus,
+            &:hover {
+                color: #fff;
+                background: rgba(255,255,255, 0.1);
+            }
+        }
+
+        &.is-active {
+            a {
+                color: #fff;
+            }
+        }
+    }
+}
+
+// header[role="banner"] {
+#top {
+    z-index: 100;
+    position: relative;
+    color: #fff;
+    background: $background-color;
+
+    .block-title {
+        margin: 0;
+        font-size: pem(30);
+        line-height: pem(36, 30);
+        text-align: center;
+        white-space: nowrap;
+    }
+
+    .nav-btn {
+        position: absolute;
+        top: pem(24);
+        left: pem(30);
+    }
+}
+
+#main {
+    background: #fff;
+
+    .block {
+        padding: pem(42) pem(30);
+    }
+}
+
+footer[role="contentinfo"] {
+    background: #ddd;
+}

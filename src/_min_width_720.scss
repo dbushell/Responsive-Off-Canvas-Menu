@@ -1,0 +1,35 @@
+#top {
+
+    .nav-btn {
+        @include visuallyhidden;
+    }
+}
+
+#nav {
+
+    .close-btn {
+        @include visuallyhidden;
+    }
+
+    .block-title {
+        @include visuallyhidden;
+    }
+
+    ul {
+        text-align: center;
+        white-space: nowrap;
+    }
+
+    li {
+        display: inline-block;
+        border-right: 1px solid rgba(255,255,255, 0.1);
+
+        &:last-child {
+            border-right: none;
+        }
+
+        a {
+            padding: pem(6, 14) pem(12, 14);
+        }
+    }
+}
