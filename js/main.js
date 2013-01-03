@@ -82,10 +82,6 @@
             }
             _init = true;
 
-            if (!transition_end) {
-                return;
-            }
-
             var closeNavEnd = function(e)
             {
                 if (e && e.target === inner) {
