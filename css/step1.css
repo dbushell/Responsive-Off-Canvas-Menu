@@ -293,6 +293,7 @@ body {
   border: 0;
   outline: none;
   background: #333333 url("../img/close-btn.svg") left center no-repeat;
+  background-size: 1.875em 1.875em;
   overflow: hidden;
   white-space: nowrap;
   text-indent: 100%;
@@ -316,6 +317,7 @@ body {
   border: 0;
   outline: none;
   background: #333333 url("../img/nav-icon.svg") left center no-repeat;
+  background-size: 1.875em 1.5em;
   overflow: hidden;
   white-space: nowrap;
   text-indent: 100%;

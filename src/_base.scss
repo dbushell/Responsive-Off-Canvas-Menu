@@ -134,6 +134,7 @@ body {
     border: 0;
     outline: none;
     background: $background-color url("../img/close-btn.svg") left center no-repeat;
+    background-size: pem(30) pem(30);
     overflow: hidden;
     white-space: nowrap;
     text-indent: 100%;
@@ -158,6 +159,7 @@ body {
     border: 0;
     outline: none;
     background: $background-color url("../img/nav-icon.svg") left center no-repeat;
+    background-size: pem(30) pem(24);
     overflow: hidden;
     white-space: nowrap;
     text-indent: 100%;
