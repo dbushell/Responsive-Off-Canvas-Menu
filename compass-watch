@@ -1,1 +1,1 @@
-compass watch --output-style=compact --no-line-comments --sass-dir="src" --css-dir="./css" --image-dir="./img" --fonts-dir="./font"
+compass watch --output-style=expanded --no-line-comments --sass-dir="src" --css-dir="./css" --image-dir="./img" --fonts-dir="./font"

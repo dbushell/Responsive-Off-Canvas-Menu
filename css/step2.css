@@ -134,7 +134,7 @@ figure {
 }
 
 fieldset {
-  border: 1px solid #c0c0c0;
+  border: 1px solid silver;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em;
 }
@@ -244,15 +244,15 @@ body {
 }
 .prose p.small {
   color: #666;
-  font-size: 0.813em;
-  line-height: 1.846em;
-  margin-bottom: 1.846em;
+  font-size: 0.8125em;
+  line-height: 1.84615em;
+  margin-bottom: 1.84615em;
 }
 .prose p.medium {
   color: #666;
   font-size: 0.875em;
-  line-height: 1.714em;
-  margin-bottom: 1.714em;
+  line-height: 1.71429em;
+  margin-bottom: 1.71429em;
 }
 .prose p:last-child {
   margin-bottom: 0;
@@ -388,7 +388,7 @@ body {
   display: block;
   color: #ccc;
   font-size: 0.875em;
-  line-height: 1.286em;
+  line-height: 1.28571em;
   font-weight: bold;
   outline: none;
 }
@@ -474,7 +474,7 @@ footer[role="contentinfo"] {
     border-right: none;
   }
   #nav li a {
-    padding: 0.429em 0.857em;
+    padding: 0.42857em 0.85714em;
   }
 }
 @media screen and (max-width: 45em) {
@@ -512,14 +512,14 @@ footer[role="contentinfo"] {
     content: "";
     position: absolute;
     top: 50%;
-    right: -0.031em;
+    right: -0.03125em;
     margin-top: -0.625em;
     border-top: 0.625em transparent solid;
     border-bottom: 0.625em transparent solid;
     border-right: 0.625em white solid;
   }
   #nav li a {
-    padding: 0.857em 2.143em;
+    padding: 0.85714em 2.14286em;
   }
 
   .js-ready #nav {
@@ -546,7 +546,7 @@ footer[role="contentinfo"] {
   .js-ready #nav {
     left: -70%;
   }
-  .js-ready #canvas {
+  .js-ready #inner-wrap {
     left: 0;
   }
 
