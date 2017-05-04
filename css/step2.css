@@ -484,7 +484,7 @@ footer[role="contentinfo"] {
     padding-top: 5.25em;
   }
   #nav:not(:target) {
-    z-index: 1;
+    z-index: -1;
     height: 0;
   }
   #nav:target .close-btn {
